@@ -1,7 +1,106 @@
-baseURL = "https://thetooth.io/"
-languageCode = "en-us"
-title = "thetooth.io 🦷"
-theme = "papermod"
+baseURL: "https://thetooth.io/"
+title: "thetooth.io 🦷"
+languageCode: "en-us"
+theme: "papermod"
 
-[params]
-favicon = "img/favicon.ico"
+paginate: 12
+
+enableRobotsTXT: true
+
+googleAnalytics: ""
+
+minify:
+  disableXML: true
+  minifyOutput: true
+
+params:
+  env: "production"
+  keywords: [Blog, thetoothio]
+  author: Me
+
+  defaultTheme: dark
+  disableThemeToggle: false
+
+  ShowReadingTime: true
+  ShowShareButtons: true
+  ShowPostNavLinks: true
+  ShowBreadCrumbs: true
+  ShowCodeCopyButtons: true
+  disableSpecial1stPost: false
+  disableScrollToTop: false
+  hideSummary: false
+  showtoc: false
+  tocopen: false
+
+  assets:
+    # disableHLJS: true # to disable highlight.js
+    # disableFingerprinting: true
+    favicon: /images/favicon.ico
+    favicon16x16: /images/favicon-16x16.png
+    favicon32x32: /images/favicon-32x32.png
+    apple_touch_icon: /images/apple-touch-icon.png
+    safari_pinned_tab: /images/favicon.png
+
+  label:
+    text: "Home"
+    icon: /images/apple-touch-icon.png
+    iconHeight: 35
+
+  homeInfoParams:
+    Title: "Hi there \U0001F44B"
+    Content: This is a short summary
+
+  socialIcons:
+    - name: twitter
+      url: "https://twitter.com/thetoothio"
+    - name: github
+      url: "https://github.com/itsankoff"
+
+  # profile-mode
+  profileMode:
+    enabled: false # needs to be explicitly set
+    title: ""
+    subtitle: "This is a subtitle"
+    imageUrl: ""
+    imageWidth: 120
+    imageHeight: 120
+    imageTitle: "profile"
+    buttons:
+      - name: Posts
+        url: posts
+      - name: Tags
+        url: tags
+
+  # for search
+  # https://fusejs.io/api/options.html
+  fuseOpts:
+    isCaseSensitive: false
+    shouldSort: true
+    location: 0
+    distance: 1000
+    threshold: 0.4
+    minMatchCharLength: 0
+    keys: ["title", "permalink", "summary", "content"]
+
+menu:
+  main:
+    - identifier: categories
+      name: Categories
+      url: /categories/
+      weight: 10
+    - identifier: tags
+      name: Tags
+      url: /tags/
+      weight: 20
+    - identifier: search
+      name: Search
+      url: /search/
+    - identifier: Archive
+      name: Archive
+      url: /archive/
+
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON # is necessary
