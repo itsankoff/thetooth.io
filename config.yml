@@ -7,7 +7,7 @@ paginate: 12
 
 enableRobotsTXT: true
 
-googleAnalytics: ""
+googleAnalytics: "G-255TE7PF8E"
 
 minify:
   disableXML: true
