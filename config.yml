@@ -25,12 +25,12 @@ params:
   ShowShareButtons: true
   ShowPostNavLinks: true
   ShowBreadCrumbs: true
+  ShowToc: false
+  TocOpen: false
   ShowCodeCopyButtons: true
   disableSpecial1stPost: false
   disableScrollToTop: false
   hideSummary: false
-  showtoc: false
-  tocopen: false
 
   assets:
     # disableHLJS: true # to disable highlight.js
