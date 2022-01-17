@@ -48,7 +48,7 @@ params:
 
   homeInfoParams:
     Title: "Hi there \U0001F44B"
-    Content: This is a short summary
+    Content: 
 
   socialIcons:
     - name: twitter
