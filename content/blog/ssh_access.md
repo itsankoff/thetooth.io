@@ -2,6 +2,8 @@
 title: "SSH access made easy 📟"
 date: 2022-01-17T13:39:58+02:00
 draft: false
+tags: ["ssh", "access", "config"]
+categories: ["tech", "infra", "devops"]
 ---
 
 If you are landing on this page you probably already know what SSH is and
