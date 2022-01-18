@@ -9,9 +9,9 @@ how to use it through CLI.
 
 If not, you can always read [here](https://en.wikipedia.org/wiki/Secure_Shell). 
 
-Usually, at the beginning, people start with simple `ssh <user>@<host>` CLI usage.
+Usually, in the beginning, people start with simple `ssh <user>@<host>` CLI usage.
 With time, people start using more and more advanced options which results in
-having messed-up commands that is hard or impossible to remember.
+having messed-up commands that are hard or impossible to remember.
 
 Let's give you an example:  
 
@@ -30,7 +30,7 @@ what you can do to make yourself a proper citizen of the world?
 
 
 ## SSH config on the rescue
-SSH utility has a metaverse of option on it own, so let's try to utilize them
+SSH utility has a metaverse of options on its own, so let's try to utilize them
 and simplify our work! One of them is the **SSH config**. The SSH config is a
 configurational file, usually stored at `~/.ssh/config` where you can pre-configure
 hosts and access configuration that you use frequently and simplify the access shown
@@ -61,7 +61,7 @@ Host test
 
 Where:
 * `host|ip` - is the DNS host or IP address of the target server
-* `port` - you can skip this if the target server runs SSH on default `22` port. Otherwise you will need to state it
+* `port` - you can skip this if the target server runs SSH on the default `22` port. Otherwise, you will need to state it
 * `username` - the name of the remote user on the target server you want to connect with. **NOTE**: Default is your local machine username
 * `/path/to/identity_file` - this is the path to the private key you use to connect to the target server. **NOTE**: Default is `~/.ssh/id_rsa` or an iteration of the files within `~/.ssh` directory
 * `host|ip_of_jump_server` - if you want to connect to a target server using a [jump server](https://en.wikipedia.org/wiki/Jump_server), you should specify its DNS host or IP address here.
@@ -82,10 +82,10 @@ In case the setup does not work, there are a few things you can inspect:
 5. 🖨️ Check for network access to the target server `ping <host>`. **NOTE**: Sometimes admins disable `ping`, so it may not work. You can use `traceroute` in that case.
 
 ## Wrap-up
-At the beginning it may seem a burden to maintain your SSH config file. But with time
+In the beginning, it may seem a burden to maintain your SSH config file. But with time
 and exposure to more servers you will eventually end up using SSH config anyway.
 
-At the end - What if you want to create another host for access. Just repeat the steps above
+In the end - What if you want to create another host for access. Just repeat the steps above
 and enjoy your day! 🎉
 
 ---
