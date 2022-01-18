@@ -38,7 +38,7 @@ ssh -p 43571 -i /where/the/heck/is/my/private/key user@this.is.a.super.long.host
 # "Mmm, the security team asked us to put everything in a private network
 # and you will need an access the server through our jump server"
 ssh -J jumbo@this.is.another.obscure.host.private.jump.com:62891 -i /where/the/heck/is/my/private/key -p 43571 user@this.is.a.super.long.host.that.is.hard.to.remember.private.com
-# Just shut up and teach me about SSH config file! :@
+# Just shut up and teach me about the SSH config file! :@
 ```
 
 Remembering dictionary information nowadays should be considered a **crime**! So
