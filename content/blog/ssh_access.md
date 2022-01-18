@@ -110,7 +110,7 @@ In case the setup does not work, there are a few things you can inspect:
 6. 🔓 In case of `WARNING: UNPROTECTED PRIVATE KEY FILE!` run `chmod 0600 /path/to/private/key`
 
 ## Wrap-up
-In the beginning, it may seem an overkill to maintain your SSH config file. But with time
+In the beginning, it may seems an overkill to maintain your SSH config file. But with time
 and exposure to more servers you will eventually end up using SSH config anyway.
 
 In the end - What if you want to create another host for access. Just repeat the steps above
