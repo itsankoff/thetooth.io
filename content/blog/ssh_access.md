@@ -92,8 +92,10 @@ There are a ton of other options which you can explore [here](https://linux.die.
 # My SSH life begins again
 ssh test
 
+# This time way easier
 ssh ci
 
+# So easy that I may run 'rm -rf /*' to spice it up a bit
 ssh prod
 ```
 If you have configured everything properly you should be connected to
