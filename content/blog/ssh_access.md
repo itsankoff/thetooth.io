@@ -4,9 +4,9 @@ date: 2022-01-17T13:39:58+02:00
 draft: false
 tags: ["ssh", "access", "config"]
 categories: ["tech", "infra", "devops"]
+cover:
+    image: "/images/ssh_config_cover.png"
 ---
-
-{{< figure src="/images/ssh_config_cover.png" alt="Terminal SSH Config text">}}
 
 If you are landing on this page you probably already know what SSH is and
 how to use it through CLI. If not, take a quick look [here](https://en.wikipedia.org/wiki/Secure_Shell).
