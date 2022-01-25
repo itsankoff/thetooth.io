@@ -6,6 +6,8 @@ tags: ["ssh", "access", "config"]
 categories: ["tech", "infra", "devops"]
 ---
 
+{{< figure src="/images/ssh_config_cover.png" alt="Terminal SSH Config text">}}
+
 If you are landing on this page you probably already know what SSH is and
 how to use it through CLI. If not, take a quick look [here](https://en.wikipedia.org/wiki/Secure_Shell).
 In general SSH is the most common tool people use to connect to remote systems and servers.
