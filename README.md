@@ -3,15 +3,15 @@
 Personal website
 
 ## Local setup
-* Run locally `hugo server`
-* Build `hugo`
+* Run locally `make run`
+* Build `make build` or `hugo build`
+* Make a new blog post `make post POST=<<name>>`
 
 ## Deployment repo
 https://github.com/itsankoff.github.io
 
 ## Link
 https://thetooth.io
-
 
 ## Resources
 * Twitter card images:
