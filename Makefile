@@ -9,3 +9,6 @@ logs:
 
 post:
 	hugo new blog/${POST}.md
+
+build:
+	hugo build
