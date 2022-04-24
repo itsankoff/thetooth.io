@@ -9,8 +9,7 @@ cover:
 ---
 
 Apart from being the cutest animal in the world 😍,
-Slowloris is also a low-bandwidth application layer **D**enial-**o**f-**S**ervice
-(DoS) attack
+Slowloris is also a low-bandwidth **D**enial-**o**f-**S**ervice (DoS) attack
 running on Application layer of the
 [OSI model](https://en.wikipedia.org/wiki/OSI_model) (OSI Layer 7). The attack
 allows the attacker to overwhelm a target HTTP server by exploiting the
