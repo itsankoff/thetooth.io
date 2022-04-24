@@ -1,6 +1,9 @@
 # itsankoff.github.io
 
-Personal website
+Personal website 🦷
+
+## Link
+https://thetooth.io
 
 ## Local setup
 * Run locally `make run`
@@ -9,9 +12,6 @@ Personal website
 
 ## Deployment repo
 https://github.com/itsankoff/itsankoff.github.io
-
-## Link
-https://thetooth.io
 
 ## Resources
 * Twitter card images:
