@@ -8,7 +8,7 @@ Personal website
 * Make a new blog post `make post POST=<<name>>`
 
 ## Deployment repo
-https://github.com/itsankoff.github.io
+https://github.com/itsankoff/itsankoff.github.io
 
 ## Link
 https://thetooth.io
