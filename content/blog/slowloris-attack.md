@@ -15,19 +15,20 @@ running on Application layer of the
 allows the attacker to overwhelm a target HTTP server by exploiting the
 internals of the [HTTP protocol](https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol).
 
-## How normal HTTP request-response works?
-In normal scenario the client opens a TCP connection after which it sends the
+## How does a normal HTTP request-response work?
+In a normal scenario the client opens a TCP connection after which it sends the
 text information for the request. Each of the request's `lines` are terminated
 by `\r\n` (so-called `CRLF` - carriage return line feed ⌨️) sequence.
 The end of the request is signaled by `\r\n\r\n`.
 
-Client (Alice) sends an HTTP `GET` request to a HTTP Server (Bob)
+Client (Alice) sends a HTTP `GET` request to a HTTP Server (Bob)
 ![HTTP GET](/images/http-get-bg-min.png)
 The first line in the HTTP request is called `request line` holding information
-about the HTTP request method `GET`, path `/` and query parameters as well as
-protocol version `HTTP/1.1`. Then the client starts sending the request
-headers - `Host: example.com`, `User-Agent: ...` and so on. In the end the
-client sends `\r\n\r\n` to notify the server that the request is done.
+about the HTTP request method `GET`, path `/` and query parameters
+(`?key=value&hello=world`) as well as protocol version `HTTP/1.1`. Then the client
+starts sending the request headers (`Host: example.com`, `User-Agent: ...`)
+and so on. In the end the client sends `\r\n\r\n` to notify the server that
+the request is done.
 
 ## How does a Slowloris attack works?
 Slowloris attack works by utilizing partial HTTP requests. HTTP protocol works
@@ -43,28 +44,29 @@ won't be answered and denial-of-service will occur.
 ![HTTP Slowloris](/images/http-slowloris-min.png)
 
 ## Server configurations
-Usually HTTP servers support configuration of parameters like running
+Usually HTTP servers support configuration parameters like running
 workers/threads, maximum open connections, timeouts and so on. The problem
-comes when a server runs with the defaults parameters or it is inherently
-exposed to such attack by its internal implementation.
+comes when a server runs with the obsolete defaults configuration or it is
+inherently exposed to such attack by its internal implementation.
 
 ### Apache server
-Apache server implementation is a thead-based implementation which is inherently
+The Apache server implementation is a thead-based implementation which is inherently
 vulnerable to attacks like slowloris. The problem comes with that the OS defines
 number of of maximum threads for each process. The numbers nowadays are pretty
 big `cat /proc/sys/kernel/threads-max` but still if you don't have access to
 kernel configuration that may be an issue. Another problem is memory footprint.
 Each OS thread is associated with memory and also there are restrictions of
 maximum Virtual Memory Areas (VMAs) per process `cat /proc/sys/vm/max_map_count`.
-So you see how not-well configured Apache server can be exposed to
-slowloris attack.
+If the server does not have any additional protection through custom configuration
+an attacker with very little bandwidth ([slowloris attack](https://github.com/itsankoff/slowloris))
+can easily exhaust system's resources and create a denial-of-service scenario.
 
 ### Nginx server
-Difference here is that nginx implementation relies on event based system
+Difference here is that the Nginx implementation relies on event based system
 which saves the server from attacks such slowloris. But the problem may come
-from having nginx running its default configuration. Nowadays nginx comes
-with default configuration that is pretty obsolete and it is usually vulnerable
-to slowloris attack.
+from having a Nginx server running its default configuration. Nowadays Nginx
+comes with a default configuration that is pretty obsolete and it is usually
+vulnerable to slowloris attack.
 
 ## Want to play with slowloris?
 If you want to explore whether some of your deployments are vulnerable or
