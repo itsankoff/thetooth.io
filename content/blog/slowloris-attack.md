@@ -66,7 +66,7 @@ from having nginx running its default configuration. Nowadays nginx comes
 with default configuration that is pretty obsolete and it is usually vulnerable
 to slowloris attack.
 
-## Want to play with slowloris
+## Want to play with slowloris?
 If you want to explore whether some of your deployments are vulnerable or
 susceptible to slowloris attack, I've created a distributed Golang implementation.
 The tools is able to run thousands of parallel slowloris connections against a target
