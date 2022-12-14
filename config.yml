@@ -1,7 +1,9 @@
 baseURL: "https://thetooth.io/"
-title: "thetooth.io 🦷"
 languageCode: "en-us"
+title: "Personal Blog 🦷"
 theme: "papermod"
+copyright: "**[thetooth.io](https://thetooth.io)**"
+
 
 paginate: 12
 
@@ -15,8 +17,10 @@ minify:
 
 params:
   env: "production"
-  keywords: [Blog, thetoothio]
-  author: Me
+  title: "Personal Blog 🦷"
+  description: "Personal blog - documentation of a rip in the fabric of reality"
+  keywords: [tech, techblog, devops, cloud, software architecture, thetoothio]
+  author: thetooth
 
   defaultTheme: dark
   disableThemeToggle: false
@@ -47,8 +51,8 @@ params:
     iconHeight: 35
 
   homeInfoParams:
-    Title: "Hi there \U0001F44B"
-    Content: 
+    Title: "Hi there \U0001F44B Welcome to my personal blog 🦷"
+    Content: "A documentation of a rip in the fabric of reality"
 
   socialIcons:
     - name: twitter
