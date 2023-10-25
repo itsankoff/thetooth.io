@@ -324,6 +324,54 @@ popular vpn clients that support OpenVPN:
 
 Now you are good to go! You can surf the internet securely.
 
+## (Optional) Gift
+If you don't want to re-read this tutorial to issue client configurations once
+in a while because you don't remember and command exec sequence, here is a quick
+`Makefile` that will simplify the creation of a client configuration.
+1. Go to `/path/to/openvpn-ca`
+3. `vim Makefile`
+4. Paste the following content:
+```sh
+SHELL := /bin/bash
+
+CLIENT ?= client1
+EASYRSA_DIR ?= .
+PKI_DIR ?= $(EASYRSA_DIR)/pki
+TA_KEY ?= $(EASYRSA_DIR)/ta.key
+OUTPUT_DIR ?= $(EASYRSA_DIR)/clients
+OVPN_TEMPLATE ?= $(OUTPUT_DIR)/client.ovpn.template
+
+.PHONY: help client
+
+help:
+	@echo "Usage:"
+	@echo "  make client CLIENT=<client_name>"
+	@echo "    Generates an OpenVPN client configuration file for the specified client."
+	@echo "    If <client_name> is not provided, 'client1' is used as the default."
+
+client:
+	@mkdir -p $(OUTPUT_DIR)
+
+	@$(EASYRSA_DIR)/easyrsa build-client-full $(CLIENT) nopass
+
+	@cat $(OVPN_TEMPLATE) > $(OUTPUT_DIR)/$(CLIENT).ovpn
+	@echo -e "<ca>\n$$(cat $(PKI_DIR)/ca.crt)\n</ca>\n<cert>\n$$(cat $(PKI_DIR)/issued/$(CLIENT).crt)\n</cert>\n<key>\n$$(cat $(PKI_DIR)/private/$(CLIENT).key)\n</key>\n<tls-auth>\n$$(cat $(TA_KEY))\n</tls-auth>" >> $(OUTPUT_DIR)/$(CLIENT).ovpn
+
+	@echo "Client configuration for $(CLIENT) created at $(OUTPUT_DIR)/$(CLIENT).ovpn"
+
+default: help
+```
+5. Save and exit
+
+Whenever you need to issue a new client configuration you can just run:
+```sh
+make client CLIENT=<name>
+```
+
+If you forget the `make client CLIENT=<name>` command execution, just run `make` and it will
+print you the help section.
+
+
 ### Troubleshooting
 1. If you receive similar messages on the server side:
 ```
