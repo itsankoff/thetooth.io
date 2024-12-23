@@ -1,15 +1,15 @@
 ---
-title: "Setting Up an OpenVPN Server with EasyRSA 3"
+title: "🛡️ Setting Up an OpenVPN Server with EasyRSA 3"
 date: 2023-10-25T16:26:07+03:00
 draft: false
 tags: ["OpenVPN", "VPN", "EasyRSA", "Security", "Linux"]
-categories: ["tech", "infra", "security", "devops"]
+categories: ["tech", "infra", "security", "devops", "vpn"]
 cover:
     image: "/images/openvpn-easy-rsa-hero-image-min.png"
 ---
 
 In this post, we will walk through the steps of setting up an OpenVPN server on
-an Ubuntu 20.04 machine. Additionally, we will provide some context around VPNs,
+an Ubuntu 20.04, 22.04 or 24.04 machine (it should work for older versions as well 🤞). Additionally, we will provide some context around VPNs,
 EasyRSA, and the cryptographic mechanisms involved in the process.
 
 ## Introduction to VPN and OpenVPN
