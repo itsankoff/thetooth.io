@@ -2,9 +2,9 @@
 title: "🚀 Automating OpenVPN Server Setup with Ansible"
 date: 2024-12-23T17:40:46+01:00
 description: "Part 2: Simplifying OpenVPN server setup using Ansible for automation enthusiasts. Follow this guide to deploy your VPN in minutes!"
-draft: true
-categories: ["tech", "infra", "security", "devops", "vpn"]
+draft: false
 tags: ["Ansible", "Automation", "VPN", "EasyRSA", "Security", "Linux"]
+categories: ["tech", "infra", "security", "devops", "vpn"]
 cover:
     image: "/images/openvpn-automation-hero.webp"
 ---
