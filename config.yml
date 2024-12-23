@@ -5,7 +5,8 @@ theme: "papermod"
 copyright: "**[thetooth.io](https://thetooth.io)**"
 
 
-paginate: 12
+pagination:
+  pagerSize: 12
 
 enableRobotsTXT: true
 
