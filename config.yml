@@ -19,7 +19,7 @@ minify:
 params:
   env: "production"
   title: "Personal Blog 🦷"
-  description: "Personal blog - documentation of a rip in the fabric of reality"
+  description: "Personal blog - Documenting a rip in the fabric of reality"
   keywords: [tech, techblog, devops, cloud, software architecture, thetoothio]
   author: thetooth
 
@@ -53,7 +53,7 @@ params:
 
   homeInfoParams:
     Title: "Hi there \U0001F44B Welcome to my personal blog 🦷"
-    Content: "A documentation of a rip in the fabric of reality"
+    Content: "Documenting a rip in the fabric of reality"
 
   socialIcons:
     - name: twitter
