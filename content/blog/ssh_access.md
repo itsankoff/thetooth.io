@@ -1,5 +1,5 @@
 ---
-title: "SSH access made easy 📟"
+title: "📟 SSH access made easy"
 date: 2022-01-17T13:39:58+02:00
 draft: false
 tags: ["ssh", "access", "config"]
