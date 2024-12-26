@@ -9,7 +9,7 @@ cover:
     image: "/images/gopro-downloader-hero.webp"
 ---
 
-## 🛠️ Why I Hacked GoPro Plus Cloud
+## 🛠️ Why I Hacked GoPro Plus Cloud?
 
 If you're a GoPro Plus user, you’ve probably felt the frustration of trying to download your media in bulk,
 only to be stopped by the **25-file limit**. This arbitrary restriction makes it tedious 😤😡 to migrate
