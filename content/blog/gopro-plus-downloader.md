@@ -47,6 +47,18 @@ For non-developers or anyone who doesn’t want to fiddle with code, I made this
     ```bash
     docker run -e AUTH_TOKEN=<gopro-auth-token> -e USER_ID=<gopro-user-id> -v </path/to/download>:/app/download itsankoff/gopro:latest
     ```
+
+    or
+
+    ```bash
+    docker run \
+    --name gopro-downloader
+    -e AUTH_TOKEN='<AUTH_TOKEN>' \
+    -e USER_ID='<USER_ID>' \
+    -v </path/to/download>:/app/download \
+    itsankoff/gopro:latest
+    ```
+
 4. Full reference of the parameters and environment variables can be found [here](https://github.com/itsankoff/gopro-plus?tab=readme-ov-file#usage-docker-environment)
 
 ## 🔍 How It Works?
