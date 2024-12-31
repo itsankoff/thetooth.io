@@ -45,7 +45,7 @@ For non-developers or anyone who doesn’t want to fiddle with code, I made this
 2. Obtain your GoPro Plus Cloud credentials using the following [guide](https://github.com/itsankoff/gopro-plus?tab=readme-ov-file#environment-variables)
 3. Run the Container:
     ```bash
-    docker run -e AUTH_TOKEN=<gopro-auth-token> -e USER_ID=<gopro-user-id> itsankoff/gopro:latest
+    docker run -e AUTH_TOKEN=<gopro-auth-token> -e USER_ID=<gopro-user-id> -v </path/to/download>:/app/download itsankoff/gopro:latest
     ```
 4. Full reference of the parameters and environment variables can be found [here](https://github.com/itsankoff/gopro-plus?tab=readme-ov-file#usage-docker-environment)
 
